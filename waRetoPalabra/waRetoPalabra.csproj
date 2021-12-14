@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\site.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="libRetoPalabra">
+      <HintPath>..\..\Clases\waRetoPalabra\waRetoPalabra\bin\Debug\netcoreapp3.1\libRetoPalabra.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,54 @@
+﻿@page
+@model waRetoPalabra.Pages.viewRetoPalabraModel
+@{
+    ViewData["Title"] = "Reto";
+}
+
+
+<h1>Reto</h1>
+
+<form>
+
+    <div class="text-left" style="width:70%">
+        <label for="txtTextoEvaluar">Texto a evaluar</label>
+        <textarea asp-for="txtTextoEvaluar" placeholder="Por favor, digite el texto aquí" rows="10" style="width:100%"></textarea>
+    </div>
+
+
+    <div class="text-left" style="width:70%">
+        <label for="txtPalabraBuscar">Palabra a buscar</label>
+        <input type="text" asp-for="txtPalabraBuscar" />
+        <input type="submit" value="Ejecutar" />
+    </div>
+
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.oReto.Conteo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oReto.Palabra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oReto.Mensaje)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.oReto.Conteo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.oReto.Palabra)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.oReto.Mensaje)
+                </td>
+            </tr>
+    </tbody>
+</table>
